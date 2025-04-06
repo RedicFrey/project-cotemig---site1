@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - C&D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <table class="layout">
+   
+    <tr>
+        <td class="logo-td">
+          <img src="CD_white.png" alt="Logo C&D" class="logo">
+        </td>
+        <td class="menu-td">
+          <ul class="nav">
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li class="has-dropdown">
+              <a >Produtos</a>
+              <div class="dropdown-grid">
+                <a href="produto1.html">Produto</a>
+                
+                
+                
+                
+              </div>
+            </li>
+            <li class="has-dropdown">
+              <a >Suporte</a>
+              <div class="dropdown-grid">
+                <a href="contato.html">Contato</a>
+              </div>
+            </li>
+            <li class="invisivel"><a href="#">Menu</a></li>
+            <li class="invisivel"><a href="#">Menu</a></li>
+          </ul>
+        </td>
+      </tr>
+
+    
+    <tr class="conteudo">
+      <td colspan="2" class="contato-container-td">
+        <div class="contato-box">
+          <h2>Fale Conosco</h2>
+          <form onsubmit="return false;">
+            <input type="text" placeholder="Seu nome" onclick="this.value='';">
+            <input type="email" placeholder="Seu e-mail" onclick="this.value='';">
+            <textarea rows="5" placeholder="Sua mensagem" onclick="this.value='';"></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  
+  <script>
+    const inputs = document.querySelectorAll("input, textarea");
+    inputs.forEach(el => {
+      el.addEventListener("focus", () => {
+        el.placeholder = '';
+      });
+    });
+  </script>
+</body>
+</html>
